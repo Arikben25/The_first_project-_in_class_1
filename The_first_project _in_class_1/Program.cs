@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 
 List<int> my_list = new List<int> { 2,1,3,4,5,6 };
+
 static void menu(List<int> my_list)
 {
     Console.WriteLine("choice 1 or 2 or 3or 4 or5 or6 or 7 or 8 or 9 or 10");
@@ -25,7 +26,7 @@ static void menu(List<int> my_list)
                 sort_list(my_list);
                 break;
             case 5:
-                EEE();
+                max_num_in_list(my_list);
                 break;
             case 6:
                 FFF();
@@ -83,9 +84,10 @@ static void menu(List<int> my_list)
         }
     }
 
-    static void EEE()
+    static void max_num_in_list(List<int> list)
     {
-        Console.WriteLine("this eee");
+        list.Sort();
+        Console.WriteLine(list[list.Count-1]);
     }
 
     static void FFF()
@@ -110,11 +112,3 @@ static void menu(List<int> my_list)
 }
 menu(my_list);
 
-List<int> my_list = new List<int> { 1, 2, 3, 4, 5 };
-
-List<int> my_list = new List<int> {2,4,1,6,3,7};
-my_list.Sort();
-foreach (int i in my_list)
-{
-    Console.WriteLine(i);
-}
