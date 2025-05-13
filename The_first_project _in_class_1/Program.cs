@@ -1,5 +1,7 @@
 ﻿
 //  פונקציה שאחראית לבחירת הפעולה 
+using System.Collections.Generic;
+
 List<int> my_list = new List<int> { 1, 2, 3, 4, 5 };
 static void menu(List<int> my_list)
 {
@@ -14,7 +16,7 @@ static void menu(List<int> my_list)
                 Replacing_the_list(my_list);
                 break;
             case 2:
-                BBB(my_list);
+                List_display(my_list);
                 break;
             case 3:
                 CCC();
@@ -55,7 +57,7 @@ static void menu(List<int> my_list)
     }
 
 
-    static void BBB(List<int> my_list)
+    static void List_display(List<int> my_list)
     {
         foreach (int i in my_list)
         {
