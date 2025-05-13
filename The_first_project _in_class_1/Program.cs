@@ -11,7 +11,7 @@ static void menu(List<int> my_list)
         switch (choice)
         {
             case 1:
-                new_list(my_list);
+                Replacing_the_list(my_list);
                 break;
             case 2:
                 BBB();
@@ -44,13 +44,14 @@ static void menu(List<int> my_list)
         }
     }
 
-    static void new_list(List<int> my_list) // Replacing the list with a new list
+    static void Replacing_the_list(List<int> my_list) // Replacing the list with a new list
     {
-        foreach (int i in my_list)
+        for (int i = 0; i < my_list.Count; i++)
         {
-            Console.WriteLine(i);
+            my_list[i] = my_list[i] +1;
+            Console.WriteLine(my_list[i]);
         }
-
+        
     }
 
 
