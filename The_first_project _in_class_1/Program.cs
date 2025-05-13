@@ -19,7 +19,7 @@ static void menu(List<int> my_list)
                 List_display(my_list);
                 break;
             case 3:
-                CCC();
+                Display_a_list_in_reverse_order(my_list);
                 break;
             case 4:
                 DDD();
@@ -65,9 +65,13 @@ static void menu(List<int> my_list)
         }
     }
 
-    static void CCC()
+    static void Display_a_list_in_reverse_order(List<int>list)
     {
-        Console.WriteLine("this ccc");
+        for (int i = list.Count - 1; i >= 0; i--)
+        {
+            Console.WriteLine(list[i]);
+        }
+
     }
 
     static void DDD()
@@ -101,3 +105,4 @@ static void menu(List<int> my_list)
     }
 }
 menu(my_list);
+
