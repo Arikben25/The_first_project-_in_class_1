@@ -38,7 +38,7 @@ static void menu(List<int> my_list)
                 len_of_list(my_list);
                 break;
             case 9:
-                III();
+                sum_of_list(my_list);
                 break;
             case 10:
                 my_bool = false;
@@ -112,9 +112,15 @@ static void menu(List<int> my_list)
         Console.WriteLine(list.Count);
     }
 
-    static void III()
+    static void sum_of_list(List<int>list)
     {
-        Console.WriteLine("this iii");
+        int total = 0;
+        foreach (int i in list)
+        {
+            total += i;
+        }
+        Console.WriteLine($"total of list is {total}");
+
     }
 }
 menu(my_list);
