@@ -29,10 +29,10 @@ static void menu(List<int> my_list)
                 max_num_in_list(my_list);
                 break;
             case 6:
-                FFF();
+                min_num_in_list(my_list);
                 break;
             case 7:
-                GGG();
+                The_average_of_the_list(my_list);
                 break;
             case 8:
                 HHH();
@@ -90,14 +90,16 @@ static void menu(List<int> my_list)
         Console.WriteLine(list[list.Count-1]);
     }
 
-    static void FFF()
+    static void min_num_in_list(List<int> list)
     {
-        Console.WriteLine("this fff");
+        list.Sort();
+        Console.WriteLine(list[0]);
     }
 
-    static void GGG()
+    static void The_average_of_the_list(List<int> list)
     {
-        Console.WriteLine("this ggg");
+        int sum = 0;
+      
     }
 
     static void HHH()
