@@ -14,7 +14,7 @@ static void menu(List<int> my_list)
                 Replacing_the_list(my_list);
                 break;
             case 2:
-                BBB();
+                BBB(my_list);
                 break;
             case 3:
                 CCC();
@@ -44,20 +44,23 @@ static void menu(List<int> my_list)
         }
     }
 
-    static void Replacing_the_list(List<int> my_list) // Replacing the list with a new list
+    static void Replacing_the_list(List<int> list) // Replacing the list with a new list
     {
-        for (int i = 0; i < my_list.Count; i++)
+        list = new List<int> { 11, 22, 33, 44 };
+        for (int i = 0; i < list.Count; i++)
         {
-            my_list[i] = my_list[i] +1;
-            Console.WriteLine(my_list[i]);
+            Console.WriteLine(list[i]);
         }
-        
+        Console.WriteLine(list);
     }
 
 
-    static void BBB()
+    static void BBB(List<int> my_list)
     {
-        Console.WriteLine("this bbb");
+        foreach (int i in my_list)
+        {
+            Console.WriteLine(i);
+        }
     }
 
     static void CCC()
