@@ -35,7 +35,7 @@ static void menu(List<int> my_list)
                 The_average_of_the_list(my_list);
                 break;
             case 8:
-                HHH();
+                len_of_list(my_list);
                 break;
             case 9:
                 III();
@@ -99,12 +99,17 @@ static void menu(List<int> my_list)
     static void The_average_of_the_list(List<int> list)
     {
         int sum = 0;
-      
+        foreach (int i in list)
+        {
+            sum += i;
+        }
+        Console.WriteLine(sum / list.Count);
+
     }
 
-    static void HHH()
+    static void len_of_list(List<int>list)
     {
-        Console.WriteLine("this hhh");
+        Console.WriteLine(list.Count);
     }
 
     static void III()
